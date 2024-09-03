@@ -1,0 +1,50 @@
+{
+    "name": "maximaster/func",
+    "description": "Functions to check and process standard types.",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4.0",
+        "webmozart/assert": "^1.10"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^5.2",
+        "friendsofphp/php-cs-fixer": "^3.63",
+        "vimeo/psalm": "^5.25"
+    },
+    "scripts": {
+        "test": "kahlan",
+        "lint": [
+            "psalm",
+            "php-cs-fixer check --diff"
+        ],
+        "check": ["composer run test", "composer run lint"]
+    },
+    "autoload": {
+        "psr-4": {
+            "Maximaster\\Func\\": "src/"
+        },
+        "files": [
+            "src/are_equal_date_intervals.php",
+            "src/array_filter_recursive.php",
+            "src/array_flatten.php",
+            "src/array_unique_list.php",
+            "src/arrize.php",
+            "src/collect_array_key_values_recursive.php",
+            "src/convert_numeric_array_to_int_list.php",
+            "src/different_values.php",
+            "src/has_type.php",
+            "src/have_only_unique_values.php",
+            "src/is_empty_array.php",
+            "src/is_empty_date_interval.php",
+            "src/mksort.php",
+            "src/same_count.php",
+            "src/same_values.php",
+            "src/suffix_strings.php"
+        ]
+    },
+    "authors": [
+        {"name": "Лавриненко Максим", "email": "maxim.lavrinenko@maximaster.ru"},
+        {"name": "Лепесин Сергей", "email": "s.lepesin@maximaster.ru"},
+        {"name": "Мельников Максим", "email": "m.melnikov@maximaster.ru"}
+    ]
+}
